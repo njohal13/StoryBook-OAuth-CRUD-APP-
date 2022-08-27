@@ -1,0 +1,18 @@
+{{!-- Create the navbar --}}
+
+<nav class="grey darken-3">
+    <div class="nav-wrapper container">
+        <a href="#!" class="brand-logo center">StoryBooks</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger show-on-large"><i class="fa fa-bars"></i></a>
+        {{!-- list items in hamburger menu --}}
+        <ul class="sidenav" id="mobile-demo">
+            <li><a href="/stories"> Public Stories</a></li>
+            <li><a href="/dashboard"> Dashboard</a></li>
+            <li><a href="/logout"> Logout</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+{{!-- Add it into layouts/main.hbs as {{>_header}} in the <body></body>--}}
+{{!-- To make hamburger menu clickable initialize it via materialize in a js script inside layouts/main.hbs body --}}
