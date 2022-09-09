@@ -1,0 +1,44 @@
+<h1>Add</h1>
+<div class="row">
+{{!-- Forms know how to handle crud methods like POST & delete --}}
+    <form action="/stories" class="col s12" method="POST"> 
+
+    {{!-- Title of the story --}}
+        <div class="row">
+            <div class="input-field">
+                <input type="text" id="title" name="title">
+                <label for="title">Title</label>
+            </div>
+        </div>
+    
+    {{!-- List of statuses to choose from --}}
+        <div class="row">
+            <div class="input-field">
+          {{!-- select creates a dropdown menu and we put options inside it --}}
+                <select name="status" id="status">
+                    <option value="public" selected>Public</option> {{!-- selected makes this option default --}}
+                    <option value="private">Private</option>
+                </select>
+                <label for="status">Status</label>
+            </div>
+        </div>
+
+
+     {{!-- Text area to enter info --}}
+        <div class="row">
+            <div class="input-field">
+                <h5>Tell Us Your Story:</h5>
+                <textarea name="body" id="body"></textarea>
+            </div>
+        </div>
+
+        
+    {{!-- Save and Cancel Buttons --}}
+        <div class="row">
+        {{!-- Save Button with type="submit" to send entered info to the server via the route --}}
+            <input type="submit" value="Save" class="btn">
+        {{!-- Cancel Button will redirect to dashboard --}}
+            <a href="/dashboard" class="btn orange">Cancel</a>
+        </div>
+    </form>
+</div>

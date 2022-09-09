@@ -9,3 +9,19 @@ p {
     margin-top: 50px;
     text-align: center;
 }
+
+/* Make the edit icon in the blue circle smaller, override materialize */
+.fa-small {
+    font-size: 16px !important; 
+}
+
+/* Move trash icon beside edit icon in dashboard */
+.btn-float {
+    float: left;
+    margin-right: 10px;
+}
+
+/* from show.hbs -> Single Story, user profile img size */
+.img-small {
+    width: 150px;
+}

@@ -15,6 +15,7 @@
     {{!-- Triple handlebars will parse the html --}}
     {{!-- Add in from partials/_header --}}
     {{>_header}}
+    {{>_add_btn}}
     {{!-- Materialize will know what to do with the class="container" --}}
     <div class="container">
         {{{body}}}
@@ -24,9 +25,18 @@
     <!-- Materialize CSS CDN script - Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
+    {{!-- CK editor for textarea --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.14.1/ckeditor.js" integrity="sha256-bEIQpI72w9NJuIVhTLFUF2/8uxl0u5800r8ddViuv+o=" crossorigin="anonymous"></script>
+
     {{!-- To make hamburger menu clickable initialize it via materialize in a js script inside layouts/main.hbs body --}}
+    {{!-- To make our selection form clickable we have to initialize it so it shows up --}}
     <script>
         M.Sidenav.init(document.querySelector('.sidenav'))
+        M.FormSelect.init(document.querySelector('#status'))
+
+        CKEDITOR.replace('body', {
+            plugins: 'wysiwygarea, toolbar, basicstyles, link'
+        })
     </script>
 </body>
 </html>

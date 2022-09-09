@@ -36,5 +36,8 @@ router.get('/logout', (req, res, next) => {
 
 // Add the auth route to app.js
 
+
+
+
 //export this module router
 module.exports = router

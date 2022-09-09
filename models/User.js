@@ -1,3 +1,7 @@
+//Schema is part of mongoose.
+//Having a schema associated with a model helps us structure what goes into our Database
+//Can set default values and control what data types that go into the database
+
 const mongoose = require('mongoose')
 
 const UserSchema = new mongoose.Schema({
@@ -27,3 +31,4 @@ const UserSchema = new mongoose.Schema({
 })
 
 module.exports = mongoose.model('User', UserSchema)
+
